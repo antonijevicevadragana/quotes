@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Alkatra&family=Dancing+Script&family=Fugaz+One&family=Great+Vibes&family=Lobster&family=Nunito:ital,wght@0,300;0,400;1,300&family=Roboto&family=Satisfy&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 25px;
+  background: linear-gradient(rgba(0, 0, 0, 0.733), white);
+  font-family: "Nunito", sans-serif;
+}
+
+/* slider */
+
+.carousel-item {
+  position: relative;
+  background-color: black;
+}
+
+.images {
+  opacity: 0.4;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: auto;
+}
+
+.images:hover {
+  opacity: 0.6;
+}
+
+.carousel-caption {
+  background-color: #33333350;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 120px;
+  color: #ff305dbe;
+  border-radius: 10px;
+}
+
+.carousel-caption h2 {
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: 5px;
+}
+
+.carousel-caption p,
+.carousel-caption h2  {
+  animation: backInRight; /*  @keyframe  */
+  animation-duration: 3s;
+}
+/* navigacija */
+
+nav {
+  box-shadow: 0 6px 17px -5px rgba(0, 0, 0, 0.679);
+  background: #ff305d;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  margin-left: 20px;
+  text-align: center;
+  padding: 20px;
+}
+
+.nav-link:hover {
+  color: #333;
+  text-shadow: 0 0 8px #333;
+}
+
+/* citati */
+
+
+
+.citati {
+  text-align: center;
+  padding: 15px 30px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  margin-bottom: 40px;
+  font-size: 30px;
+  background-image: url(images/pen.png);
+  background-size: 13%;
+  background-repeat: no-repeat;
+  background-position: right center;
+ 
+}
+
+.slikeAutora {
+  border-radius: 50%;
+  /* style="width:500px;height:600px;" */
+  width: 300px;
+  height: 200px;
+
+  /* centriranje slike */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+ 
+
+}
+
+cite {
+  font-family: "Great Vibes", cursive;
+}
+
+q {
+  font-weight: 100;
+}
+
+.paragraf {
+  font-size: 18px;
+  color: #33333378;
+}
+
+/* footer */
+
+footer {
+  box-shadow: 
+   inset 0px 8px 5px -7px rgba(245, 245, 245, 0.738);  /*shadow za top */
+}
+
+footer p {
+  font-size: 18px;
+  margin-top: 15px;
+  
+}
+
+
+/* responsive */
+
+@media only screen and (min-width: 992px) {
+  .carousel-item {
+    height: 500px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .carousel-item {
+    height: 730px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .citati {
+    font-size: 27px;
+  }
+  .navbar {
+    justify-content: center;
+  }
+  .citati {
+    background-image: none;
+  }
+  cite::before {
+    content: "🖋️ ";
+  }
+}
